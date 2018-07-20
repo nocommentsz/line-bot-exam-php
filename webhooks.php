@@ -27,7 +27,7 @@
     }
     #ตัวอย่าง Message Type "Image"
     else if($message == "คนสวย"){
-        $image_url = "https://www.facebook.com/bnk48official.orn/photos/pcb.1035569199940163/1035569046606845/?type=3&theater";
+        $image_url = "https://ibb.co/fragby";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
