@@ -57,7 +57,7 @@
     else if($message == "video"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "";//ใส่ url ของ video ที่ต้องการส่ง
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.facebook.com/PPoryd/videos/230968090873967/?t=5";//ใส่ url ของ video ที่ต้องการส่ง
         $arrayPostData['messages'][0]['previewImageUrl'] = "";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
