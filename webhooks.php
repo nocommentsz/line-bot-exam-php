@@ -27,7 +27,7 @@
     }
     #ตัวอย่าง Message Type "Image"
     else if($message == "ตันอร"){
-        $image_url = "https://www.picz.in.th/images/2018/07/21/NXcim8.gif";
+        $image_url = "https://www.tlcthai.com/education/wp-content/uploads/2018/07/orn-bnk48-01.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
