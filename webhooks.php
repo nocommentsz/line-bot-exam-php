@@ -27,7 +27,7 @@
     }
     #ตัวอย่าง Message Type "Image"
     else if($message == "คนสวย"){
-        $image_url = "https://imgur.com/a/snAzuRL.jpg";
+        $image_url = "https://www.img.in.th/images/27d5bf4738c99a81f1f8e433975e0d3b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
