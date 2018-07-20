@@ -56,10 +56,11 @@
     }
     #ตัวอย่าง Message Type "Video"
     else if($message == "video"){
+        $video_url = "https://www.picz.in.th/images/2018/07/21/NXcim8.gif";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.picz.in.th/images/2018/07/21/NXcim8.gif";//ใส่ url ของ video ที่ต้องการส่ง
-        $arrayPostData['messages'][0]['previewImageUrl'] = "";//ใส่รูป preview ของ video
+        $arrayPostData['messages'][0]['originalContentUrl'] = "video_url";//ใส่ url ของ video ที่ต้องการส่ง
+        $arrayPostData['messages'][0]['previewImageUrl'] = "video_url";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
 
