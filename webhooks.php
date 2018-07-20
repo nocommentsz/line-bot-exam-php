@@ -56,7 +56,7 @@
     }
     #ตัวอย่าง Message Type "Video"
     else if($message == "video"){
-        $video_url = "https://www.picz.in.th/images/2018/07/21/NXcim8.gif";
+        $video_url = "https://vimeo.com/user87510479/review/280974166/cbf272462a";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
         $arrayPostData['messages'][0]['originalContentUrl'] = "video_url";//ใส่ url ของ video ที่ต้องการส่ง
