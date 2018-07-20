@@ -56,11 +56,10 @@
     }
     #ตัวอย่าง Message Type "Video"
     else if($message == "video"){
-        $video_url = "https://vimeo.com/user87510479/review/280974166/cbf272462a";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "video_url";//ใส่ url ของ video ที่ต้องการส่ง
-        $arrayPostData['messages'][0]['previewImageUrl'] = "video_url";//ใส่รูป preview ของ video
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://example.com/original.mp4";//ใส่ url ของ video ที่ต้องการส่ง
+        $arrayPostData['messages'][0]['previewImageUrl'] = "https://example.com/preview.jpg";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
 
