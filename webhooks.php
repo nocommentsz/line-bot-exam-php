@@ -101,7 +101,8 @@ else if($message == "แทน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ชอบก็ให้รู้ว่าชอบไปสิงับ";
-        $arrayPostData['messages'][0]['text'] = "ชอบก็ให้รู้ว่าชอบไปเลยงับ";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "ชอบก็ให้รู้ว่าชอบไปเลยงับ";
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
