@@ -49,9 +49,9 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ไม่เป็นไรนะงับ สู้ๆงับ";
-        $arrayPostData['messages'][1]['type'] = "image";
-        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
         
     
