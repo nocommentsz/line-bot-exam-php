@@ -44,21 +44,21 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "ขอกำลังใจหน่อย"){
-        $image_url = "https://www.img.in.th/images/778f4254bcd11a588a01987659b0230a.jpg";
+    else if($message == "คิดถึง"){
+        $image_url = "https://www.picz.in.th/images/2018/07/23/NGsEgI.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ไม่เป็นไรนะงับ สู้ๆงับ";
+        $arrayPostData['messages'][0]['text'] = "คิดถึงเหมือนกันงับ";
         $arrayPostData['messages'][1]['type'] = "image";
         $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "video"){
+    else if($message == "ขอกำลังใจหน่อย"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
         $arrayPostData['messages'][0]['originalContentUrl'] = "https://dc572.4shared.com/img/nEK3dDddgm/11d30c37/dlink__2Fdownload_2FnEK3dDddgm_3Fsbsr_3D3e55bc0207bce360de49f7980cc3b3949e5_26bip_3DMjAzLjE1OC4xMzEuNTU_26lgfp_3D66_26dsid_3D0kSbKZCM.b7563b4871e57141d90f0d60fb846a00_26bip_3DMjAzLjE1OC4xMzEuNTU_26bip_3DMjAzLjE1OC4xMzEuNTU/preview.mp4?cuid=1262102816&cupa=dc393b16fd5436b82b72e02444bc2ddd";//ใส่ url ของ video ที่ต้องการส่ง
-        $arrayPostData['messages'][0]['previewImageUrl'] = "https://api.reh.tw/line/bot/example/assets/images/example.jpg";//ใส่รูป preview ของ video
+        $arrayPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/778f4254bcd11a588a01987659b0230a.jpg";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
