@@ -45,7 +45,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($message == "ขอกำลังใจหน่อย"){
-        $image_url = "https://www.picz.in.th/images/2018/07/21/NXgk2e.jpg";
+        $image_url = "https://www.img.in.th/images/778f4254bcd11a588a01987659b0230a.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ไม่เป็นไรนะงับ สู้ๆงับ";
