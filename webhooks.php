@@ -57,7 +57,7 @@
     else if($message == "video"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://api.reh.tw/line/bot/example/assets/videos/example.mp4";//ใส่ url ของ video ที่ต้องการส่ง
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://dc572.4shared.com/img/nEK3dDddgm/11d30c37/dlink__2Fdownload_2FnEK3dDddgm_3Fsbsr_3D3e55bc0207bce360de49f7980cc3b3949e5_26bip_3DMjAzLjE1OC4xMzEuNTU_26lgfp_3D66_26dsid_3D0kSbKZCM.b7563b4871e57141d90f0d60fb846a00_26bip_3DMjAzLjE1OC4xMzEuNTU_26bip_3DMjAzLjE1OC4xMzEuNTU/preview.mp4?cuid=1262102816&cupa=dc393b16fd5436b82b72e02444bc2ddd";//ใส่ url ของ video ที่ต้องการส่ง
         $arrayPostData['messages'][0]['previewImageUrl'] = "https://api.reh.tw/line/bot/example/assets/images/example.jpg";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
