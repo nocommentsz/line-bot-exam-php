@@ -67,6 +67,12 @@
         $arrayPostData['messages'][0]['text'] = "ไปเลยไปคนเฮน";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "โหวตเตะอลพ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "+1 สนับสนุนงับ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
