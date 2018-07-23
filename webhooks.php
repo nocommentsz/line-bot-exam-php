@@ -48,7 +48,7 @@
         $image_url = "https://www.picz.in.th/images/2018/07/23/NGsEgI.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "คิดถึงเหมือนกันงับ";
+        $arrayPostData['messages'][0]['text'] = "คิดถึงเหมือนกันงับยกเว้นลูกพีท";
         $arrayPostData['messages'][1]['type'] = "image";
         $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
