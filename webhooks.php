@@ -91,6 +91,19 @@ else if($message == "ขอรูปสวยๆ"){
         $arrayPostData['messages'][0]['text'] = "ถ้าไม่สวยเจอดจีย์...";
         replyMsg($arrayHeader,$arrayPostData);
     }
+else if($message == "อรคนสวย"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ดีมากงับ ถ้าสวยกว่านี้ก็นางฟ้าแล้ว";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+else if($message == "แทน"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ชอบก็ให้รู้ว่าชอบไปสิงับ";
+        $arrayPostData['messages'][0]['text'] = "ชอบก็ให้รู้ว่าชอบไปเลยงับ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
