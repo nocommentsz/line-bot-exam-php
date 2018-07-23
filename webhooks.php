@@ -57,8 +57,8 @@
     else if($message == "video"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://drive.google.com/open?id=1A7FMu-a8RM8nJe3nZRgF3DRMwlGxjehR";//ใส่ url ของ video ที่ต้องการส่ง
-        $arrayPostData['messages'][0]['previewImageUrl'] = "https://drive.google.com/open?id=1A7FMu-a8RM8nJe3nZRgF3DRMwlGxjehR";//ใส่รูป preview ของ video
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://drive.google.com/open?id=1ABOkugWaY7UVYW3HXpBkZgw3sjNnNwx5";//ใส่ url ของ video ที่ต้องการส่ง
+        $arrayPostData['messages'][0]['previewImageUrl'] = "https://drive.google.com/open?id=1ABOkugWaY7UVYW3HXpBkZgw3sjNnNwx5";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
