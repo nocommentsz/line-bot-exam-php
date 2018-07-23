@@ -73,6 +73,18 @@
         $arrayPostData['messages'][0]['text'] = "+1 สนับสนุนงับ";
         replyMsg($arrayHeader,$arrayPostData);
     }
+else if($message == "แม่ง"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ตบได้นะ ได้จบๆ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+else if($message == "เหี้ย"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "มึงสิเหี้ย";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
