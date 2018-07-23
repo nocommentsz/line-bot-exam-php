@@ -54,7 +54,13 @@
         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
-    
+    else if($message == "video"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "video";
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://drive.google.com/open?id=1A7FMu-a8RM8nJe3nZRgF3DRMwlGxjehR";//ใส่ url ของ video ที่ต้องการส่ง
+        $arrayPostData['messages'][0]['previewImageUrl'] = "https://drive.google.com/open?id=1A7FMu-a8RM8nJe3nZRgF3DRMwlGxjehR";//ใส่รูป preview ของ video
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
