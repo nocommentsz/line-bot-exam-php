@@ -94,7 +94,7 @@ else if($message == "ขอรูปสวยๆ"){
 else if($message == "อรคนสวย"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ดีมากงับ ถ้าสวยกว่านี้ก็นางฟ้าแล้ว";
+        $arrayPostData['messages'][0]['text'] = "ดีมากงับ อยากได้อะไร..ไปซื้อเองนะ";
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($message == "แทน"){
