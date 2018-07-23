@@ -36,7 +36,6 @@
     }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
-        $image_url = "https://www.picz.in.th/images/2018/07/21/NXgk2e.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "อย่าทิ้งกันไป";
@@ -46,12 +45,13 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($message == "ขอกำลังใจหน่อย"){
+        $image_url = "https://www.picz.in.th/images/2018/07/21/NXgk2e.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ไม่เป็นไรนะงับ สู้ๆงับ";
         $arrayPostData['messages'][1]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
         
     
