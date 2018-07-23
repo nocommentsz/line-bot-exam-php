@@ -61,6 +61,12 @@
         $arrayPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/778f4254bcd11a588a01987659b0230a.jpg";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "อลพ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ไปเลยไปคนเฮน";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
