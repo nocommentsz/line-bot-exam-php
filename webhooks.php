@@ -55,13 +55,16 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Video"
-    else if($message == "video"){
+    else if($message == "ขอกำลังใจหน่อย"){
+        $image_url = "https://www.picz.in.th/images/2018/07/21/NXgk2e.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://example.com/original.mp4";//ใส่ url ของ video ที่ต้องการส่ง
-        $arrayPostData['messages'][0]['previewImageUrl'] = "https://example.com/preview.jpg";//ใส่รูป preview ของ video
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ไม่เป็นไรน้า สู้ๆงับ";
+        $arrayPostData['messages'][1]['type'] = "sticker";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
-    }
 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
