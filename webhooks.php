@@ -117,6 +117,12 @@ else if($message == "หมาเต้"){
         $arrayPostData['messages'][0]['text'] = "ไอหมาขี้กากเฝ้าบ้านแดง";
         replyMsg($arrayHeader,$arrayPostData);
     }
+else if($message == "โอ๋เอ๋นะ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "โอ๋ๆ ไม่งอลนะงับ...";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
