@@ -61,28 +61,10 @@
         $arrayPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/778f4254bcd11a588a01987659b0230a.jpg";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "อลพ"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ไปเลยไปคนเฮน";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
     else if($message == "โหวตเตะอลพ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "+1 สนับสนุนงับ";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
-else if($message == "แม่ง"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ตบได้นะ ได้จบๆ";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
-else if($message == "เหี้ย"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "มึงสิเหี้ย";
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($message == "ขอรูปสวยๆ"){
