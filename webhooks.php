@@ -54,13 +54,6 @@
         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "ขอกำลังใจหน่อย"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://dc572.4shared.com/img/nEK3dDddgm/11d30c37/dlink__2Fdownload_2FnEK3dDddgm_3Fsbsr_3D0dba75366f3cd68e64b94ceaf8506c8a9e5_26bip_3DMTM0LjE5Ni4xMS4xNTE_26lgfp_3D66_26dsid_3D0kSbKZCM.b7563b4871e57141d90f0d60fb846a00_26bip_3DMTM0LjE5Ni4xMS4xNTE_26bip_3DMTM0LjE5Ni4xMS4xNTE/preview.mp4?cuid=1262102816&cupa=dc393b16fd5436b82b72e02444bc2ddd.mp4";//ใส่ url ของ video ที่ต้องการส่ง
-        $arrayPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/778f4254bcd11a588a01987659b0230a.jpg";//ใส่รูป preview ของ video
-        replyMsg($arrayHeader,$arrayPostData);
-    }
     else if($message == "โหวตเตะอลพ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
